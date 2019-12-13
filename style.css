@@ -13,5 +13,9 @@ button {
 }
 
 .form-control {
-    margin-top: 40px;
+    margin-top: 20px;
+}
+
+.custom-control {
+    padding: 10px 0;
 }
