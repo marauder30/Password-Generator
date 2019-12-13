@@ -35,9 +35,33 @@
 
 
             <div class="form-group">
-                <label for="length">Move the slider to select a password length between 8 and 128 characters!</label>
-                <input type="range" class="custom-range" min="8" max="128" id="length">
-            </div>
+                <textarea class="form-control" id="formControlTextarea1" rows="5"></textarea>
+              </div>
+
+              <div class="col-sm-12">
+                <label for="validationCustom">Please select a number between 8 and 128 to choose how many characters your password will contain.</label>
+                <input type="text" class="form-control" id="validationCustom" required>
+                <div class="invalid-feedback">
+                  Please enter a number between 8 and 128.
+                </div>
+              </div>
+
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                <label class="custom-control-label" for="customSwitch1">Turn this slider on to enable uppercase letters.</label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                <label class="custom-control-label" for="customSwitch2">Turn this slider on to enable lowercase letters.</label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                <label class="custom-control-label" for="customSwitch3">Turn this slider on to enable numbers.</label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                <label class="custom-control-label" for="customSwitch4">Turn this slider on to enable special characters.</label>
+              </div>
         </form>
 
     </div>

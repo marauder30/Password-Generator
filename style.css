@@ -11,3 +11,7 @@ nav {
 button {
     background-color: purple;
 }
+
+.form-control {
+    margin-top: 40px;
+}

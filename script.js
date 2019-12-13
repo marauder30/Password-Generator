@@ -22,24 +22,40 @@ var generateEl = document.getElementById('generate');
 var clipboardEl = document.getElementById('clipboard');
 
 
-generateEl.addEventListener("click", function() {
-    var length = lengthEl.Value;
-    console.log(length);
-})
-
+// generateEl.addEventListener("click", function() {
+//     var length = lengthEl.Value;
+//     console.log(length);
+// })
 
 console.log(randUpper);
 console.log(randLower);
 console.log(randNum);
 console.log(randSpecial);
 
+generateEl.addEventListener("click", function() {
+    
+})
+
+
+
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+
 
 
 
 //function randomLower() {
-//    return String.
-
-
+    //    return String.    
+    
+    
 
 
 //button eventlistener when clicked will generate password 
