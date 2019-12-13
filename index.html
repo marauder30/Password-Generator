@@ -17,7 +17,7 @@
     <div class="container">
         <div class="row justify-content-around">
             <div class="col-md-3">
-                <button type="button" class="btn btn-primary btn-lg">Generate Password</button>
+                <button type="button" class="btn btn-primary btn-lg" id="generate">Generate Password</button>
             </div>
             <div class="col-md-3">
                 <button type="button" class="btn btn-primary btn-lg">WORK IN PROGRESS</button>
@@ -25,17 +25,22 @@
         </div>
     </div>
 
-    <form>
+    
+    
+    <div class="container">
+    
 
 
         <form>
-            <div class="form-group">
-              <label for="formControlRange">Please move the slider to choose anywhere from 8-128 characters</label>
-              <input type="range" class="form-control-range" id="formControlRange">
-            </div>
-          </form>
 
-    </form>
+
+            <div class="form-group">
+                <label for="length">Move the slider to select a password length between 8 and 128 characters!</label>
+                <input type="range" class="custom-range" min="8" max="128" id="length">
+            </div>
+        </form>
+
+    </div>
 
     <script src="script.js"></script>
 </body>
