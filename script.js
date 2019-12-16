@@ -12,6 +12,9 @@ var numArray = "0123456789".split("");
 var specialArray = "~!@#$%^&*()-_+=.,?".split("");
 // var allSelected = 
 
+
+//vvv these currently reside globally. this makes the characters stick to to one
+//     per type. they should exist within functions
 var randUpper = upperArray[Math.floor(Math.random() * upperArray.length)];
 var randLower = lowerArray[Math.floor(Math.random() * lowerArray.length)];
 var randNum = numArray[Math.floor(Math.random() * numArray.length)];
@@ -24,33 +27,31 @@ console.log(randUpper);
 
 
 
-var resultEl = document.getElementById('#result');
-var lengthEl = document.getElementById('#length');
-var uppercaseEl = document.getElementById('#uppercase');
-var lowercaseEl = document.getElementById('#lowercase');
-var numbersEl = document.getElementById('#numbers');
-var symbolsEl = document.getElementById('#symbols');
-var generateEl = document.getElementById('#generate');
-var clipboardEl = document.getElementById('#clipboard');
+var resultEl = document.getElementById('result');
+var lengthEl = document.getElementById('length');
+var uppercaseEl = document.getElementById('uppercase');
+var lowercaseEl = document.getElementById('lowercase');
+var numbersEl = document.getElementById('numbers');
+var symbolsEl = document.getElementById('symbols');
+var generateEl = document.getElementById('generate');
+var clipboardEl = document.getElementById('clipboard');
 
 var totalCharEl = parseInt(lengthEl);
 var possibleChar = "123";
 var totalChar = "";
 var charResult = "";
 
-$('#uppercase').on('change', function(){
-//     if ((uppercaseEL).is(':checked')) {
-//   alert("hi");
-// }
+
+
    var value = this.value;
    console.log(value);
    if (value === true) {
        possibleChar = possibleChar.push(randUpper);
        console.log(possibleChar);
    }
-});
+;
 
-
+// result.textContent
 
 
 function newPassword() {
@@ -72,19 +73,19 @@ function newPassword() {
     }
 }
 
-
+var generator;
 
 
 console.log(uppercaseEl);
 
-
-generateEl.addEventListener('click', function(e) {
-    if (uppercase && lowercase && numbers && symbols === false) {
-        alert("You must select at least one character type!");
-  }
-
-} );
-
+//                               
+generateEl.addEventListener('click', function (event) {
+    event.preventDefault();
+    generator = generateEl.value;
+    if (uppercaseEl.checked === false) {
+      console.log("You must select at least one character type!");
+  };
+});
 
 
 
