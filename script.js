@@ -6,32 +6,94 @@
 // var lowerArray = lower.split("");
 // var numArray = num.split("");
 // var specialArray = special.split("");
+var upperArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+var lowerArray = "abcdefghijklmnopqrstuvwxyz".split("");
+var numArray = "0123456789".split("");
+var specialArray = "~!@#$%^&*()-_+=.,?".split("");
+// var allSelected = 
+
 var randUpper = upperArray[Math.floor(Math.random() * upperArray.length)];
 var randLower = lowerArray[Math.floor(Math.random() * lowerArray.length)];
 var randNum = numArray[Math.floor(Math.random() * numArray.length)];
 var randSpecial = specialArray[Math.floor(Math.random() * specialArray.length)];
 
-var upperArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-var lowerArray = "abcdefghijklmnopqrstuvwxyz".split("");
-var numArray = "0123456789".split("");
-var specialArray = "~!@#$%^&*()-_+=.,?";
+console.log(randUpper);
 
 
 
 
 
-var resultEl = document.getElementById('result');
-var lengthEl = document.getElementById('length');
-var uppercaseEl = document.getElementById('uppercase');
-var lowercaseEl = document.getElementById('lowercase');
-var numbersEl = document.getElementById('numbers');
-var symbolsEl = document.getElementById('symbols');
-var generateEl = document.getElementById('generate');
-var clipboardEl = document.getElementById('clipboard');
+
+var resultEl = document.getElementById('#result');
+var lengthEl = document.getElementById('#length');
+var uppercaseEl = document.getElementById('#uppercase');
+var lowercaseEl = document.getElementById('#lowercase');
+var numbersEl = document.getElementById('#numbers');
+var symbolsEl = document.getElementById('#symbols');
+var generateEl = document.getElementById('#generate');
+var clipboardEl = document.getElementById('#clipboard');
+
+var totalCharEl = parseInt(lengthEl);
+var possibleChar = "123";
+var totalChar = "";
+var charResult = "";
+
+$('#uppercase').on('change', function(){
+//     if ((uppercaseEL).is(':checked')) {
+//   alert("hi");
+// }
+   var value = this.value;
+   console.log(value);
+   if (value === true) {
+       possibleChar = possibleChar.push(randUpper);
+       console.log(possibleChar);
+   }
+});
 
 
 
-var length = lengthEl.value
+
+function newPassword() {
+    if (uppercaseEl === true) {
+        possibleChar = possibleChar.concat(upperArray);
+        totalChar.push(randUpper);
+    }
+    if (lowercaseEl === true) {
+        possibleChar = possibleChar.concat(lowerArray);
+        totalChar.push(randLower);
+    }
+    if (numbersEl === true) {
+        possibleChar = possibleChar.concat(numArray);
+        totalChar.push(randNum);
+    }
+    if (symbolsEl === true) {
+        possibleChar = possibleChar.concat(specialArray);
+        totalChar.push(randSpecial);
+    }
+}
+
+
+
+
+console.log(uppercaseEl);
+
+
+generateEl.addEventListener('click', function(e) {
+    if (uppercase && lowercase && numbers && symbols === false) {
+        alert("You must select at least one character type!");
+  }
+
+} );
+
+
+
+
+
+
+
+
+//var length = lengthEl.value
+
 // generateEl.addEventListener("click", function() {
 //     var length = lengthEl.Value;
 //     console.log(length);
@@ -42,17 +104,6 @@ console.log(randLower);
 console.log(randNum);
 console.log(randSpecial);
 
-generateEl.addEventListener('result', function(submit) {
-    event.preventDefault();
-    if ((lengthEl < 8) && (lengthEl > 128) && (uppercaseEl == false) && (lowercaseEl == false) && (numbersEl == false) && (symbolsEl == false)) {
-        alert(`You must select at least one value!`);
-    } else {
-        alert(randUpper);
-    }
-}
-
-
-)
 
 // 
 // 

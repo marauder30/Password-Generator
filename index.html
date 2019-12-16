@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Nick's Random Password Generator!</title>
@@ -20,7 +21,7 @@
                 <button type="button" class="btn btn-primary btn-lg" id="generate">Generate Password</button>
             </div>
             <div class="col-md-3">
-                <button type="button" class="btn btn-primary btn-lg disabled">WORK IN PROGRESS</button>
+                <button type="button" class="btn btn-primary btn-lg disabled" id="clipboard">WORK IN PROGRESS</button>
             </div>
         </div>
     </div>
@@ -35,32 +36,32 @@
 
 
             <div class="form-group">
-                <textarea class="form-control" id="formControlTextarea1" rows="5"></textarea>
+                <textarea class="form-control" id="result" rows="5"></textarea>
               </div>
 
               <div class="col-sm-12">
                 <label for="validationCustom">Please select a number between 8 and 128 to choose how many characters your password will contain.</label>
-                <input type="text" class="form-control" id="validationCustom" required>
+                <input type="text" class="form-control" id="length" required>
                 <div class="invalid-feedback">
                   Please enter a number between 8 and 128.
                 </div>
               </div>
 
               <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                <label class="custom-control-label" for="customSwitch1">Turn this slider on to enable uppercase letters.</label>
+                <input type="checkbox" class="custom-control-input" id="uppercase">
+                <label class="custom-control-label" for="uppercase">Turn this slider on to enable uppercase letters.</label>
               </div>
               <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitch2">
-                <label class="custom-control-label" for="customSwitch2">Turn this slider on to enable lowercase letters.</label>
+                <input type="checkbox" class="custom-control-input" id="lowercase">
+                <label class="custom-control-label" for="lowercase">Turn this slider on to enable lowercase letters.</label>
               </div>
               <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitch3">
-                <label class="custom-control-label" for="customSwitch3">Turn this slider on to enable numbers.</label>
+                <input type="checkbox" class="custom-control-input" id="numbers">
+                <label class="custom-control-label" for="numbers">Turn this slider on to enable numbers.</label>
               </div>
               <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitch4">
-                <label class="custom-control-label" for="customSwitch4">Turn this slider on to enable special characters.</label>
+                <input type="checkbox" class="custom-control-input" id="symbols">
+                <label class="custom-control-label" for="symbols">Turn this slider on to enable special characters.</label>
               </div>
         </form>
 
