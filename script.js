@@ -145,10 +145,11 @@
         
         var resultField = document.getElementById("result");
         
-        var upperArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-        var lowerArray = "abcdefghijklmnopqrstuvwxyz".split("");
-        var numArray = "0123456789".split("");
-        var specialArray = "~!@#$%^&*()-_+=.,?".split("");
+        // var upperArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+        // var lowerArray = "abcdefghijklmnopqrstuvwxyz".split("");
+        // var numArray = "0123456789".split("");
+        // var specialArray = "~!@#$%^&*()-_+=.,?".split("");
+        var emptyArray = [];
 
 var upperChar = confirm("Would you like to use upper case letters? OK for yes, cancel for no.");
 var lowerChar = confirm("Would you like to use lower case letters? OK for yes, cancel for no.");
@@ -160,19 +161,36 @@ if (!upperChar && !lowerChar && !numericalChar && !specialChar) {
     alert("You must choose at least one character type!");
 } else {    
     var characterCount = prompt("Please choose how many characters you would like your password to include, between 8 and 128.");
-    
-    if (characterCount < 8 || characterCount > 128) {
+    var charCount = parseInt(characterCount);
+    console.log(charCount);
+
+    if (charCount < 8 || charCount > 128) {
         alert("You must select within a valid range!");
-        
+        } else {
+            if (upperChar) {
+              emptyArray.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""));
+            }
+            if (lowerChar) {
+                emptyArray.push("abcdefghijklmnopqrstuvwxyz".split(""));
+            }
+            if (numericalChar) {
+                emptyArray.push("0123456789".split(""));
+            }
+            if (specialChar) {
+                emptyArray.push("~!@#$%^&*()-_+=.,?".split(""));
+            }
+           
+        }
     }
-}
+//     for (var i = 0; i < characterCount)    
+// }
 
 // create a function to make a new array with the characters chosen
 // generate the password
 // maclunkey
+// go buy a notebook
 // 
+// for each loop, characterCount captures how many iterations!
 //
-//
-//
-//
+// remove one button, make the other copy to clipboard
 //
