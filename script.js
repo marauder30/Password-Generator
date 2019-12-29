@@ -1,91 +1,83 @@
-// var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-// var lower = "abcdefghijklmnopqrstuvwxyz";
-// var num = "0123456789";
-// var special = "~!@#$%^&*()-_+=.,?";             REDUNDANT CODE
-// var upperArray = upper.split("");
-// var lowerArray = lower.split("");
-// var numArray = num.split("");
-// var specialArray = special.split("");
-var upperArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-var lowerArray = "abcdefghijklmnopqrstuvwxyz".split("");
-var numArray = "0123456789".split("");
-var specialArray = "~!@#$%^&*()-_+=.,?".split("");
+// var upperArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+// var lowerArray = "abcdefghijklmnopqrstuvwxyz".split("");
+// var numArray = "0123456789".split("");
+// var specialArray = "~!@#$%^&*()-_+=.,?".split("");
 // var allSelected = 
 
 
 //vvv these currently reside globally. this makes the characters stick to to one
 //     per type. they should exist within functions
-var randUpper = upperArray[Math.floor(Math.random() * upperArray.length)];
-var randLower = lowerArray[Math.floor(Math.random() * lowerArray.length)];
-var randNum = numArray[Math.floor(Math.random() * numArray.length)];
-var randSpecial = specialArray[Math.floor(Math.random() * specialArray.length)];
+// var randUpper = upperArray[Math.floor(Math.random() * upperArray.length)];
+// var randLower = lowerArray[Math.floor(Math.random() * lowerArray.length)];
+// var randNum = numArray[Math.floor(Math.random() * numArray.length)];
+// var randSpecial = specialArray[Math.floor(Math.random() * specialArray.length)];
 
-console.log(randUpper);
-
-
+// console.log(randUpper);
 
 
 
 
-var resultEl = document.getElementById('result');
-var lengthEl = document.getElementById('length');
-var uppercaseEl = document.getElementById('uppercase');
-var lowercaseEl = document.getElementById('lowercase');
-var numbersEl = document.getElementById('numbers');
-var symbolsEl = document.getElementById('symbols');
-var generateEl = document.getElementById('generate');
-var clipboardEl = document.getElementById('clipboard');
-
-var totalCharEl = parseInt(lengthEl);
-var possibleChar = "123";
-var totalChar = "";
-var charResult = "";
 
 
+// var resultEl = document.getElementById('result');
+// var lengthEl = document.getElementById('length');
+// var uppercaseEl = document.getElementById('uppercase');
+// var lowercaseEl = document.getElementById('lowercase');
+// var numbersEl = document.getElementById('numbers');
+// var symbolsEl = document.getElementById('symbols');
+// var generateEl = document.getElementById('generate');
+// var clipboardEl = document.getElementById('clipboard');
 
-   var value = this.value;
-   console.log(value);
-   if (value === true) {
-       possibleChar = possibleChar.push(randUpper);
-       console.log(possibleChar);
-   }
-;
+// var totalCharEl = parseInt(lengthEl);
+// var possibleChar = "123";
+// var totalChar = "";
+// var charResult = "";
+
+
+
+//    var value = this.value;
+//    console.log(value);
+//    if (value === true) {
+//        possibleChar = possibleChar.push(randUpper);
+//        console.log(possibleChar);
+//    }
+// ;
 
 // result.textContent
 
 
-function newPassword() {
-    if (uppercaseEl === true) {
-        possibleChar = possibleChar.concat(upperArray);
-        totalChar.push(randUpper);
-    }
-    if (lowercaseEl === true) {
-        possibleChar = possibleChar.concat(lowerArray);
-        totalChar.push(randLower);
-    }
-    if (numbersEl === true) {
-        possibleChar = possibleChar.concat(numArray);
-        totalChar.push(randNum);
-    }
-    if (symbolsEl === true) {
-        possibleChar = possibleChar.concat(specialArray);
-        totalChar.push(randSpecial);
-    }
-}
-
-var generator;
+// function newPassword() {
+//     if (uppercaseEl === true) {
+//         possibleChar = possibleChar.concat(upperArray);
+//         totalChar.push(randUpper);
+//     }
+//     if (lowercaseEl === true) {
+//         possibleChar = possibleChar.concat(lowerArray);
+//         totalChar.push(randLower);
+//     }
+//     if (numbersEl === true) {
+//         possibleChar = possibleChar.concat(numArray);
+//         totalChar.push(randNum);
+//     }
+//     if (symbolsEl === true) {
+//         possibleChar = possibleChar.concat(specialArray);
+//         totalChar.push(randSpecial);
+//     }
+// }
 
 
-console.log(uppercaseEl);
 
-//                               
-generateEl.addEventListener('click', function (event) {
-    event.preventDefault();
-    generator = generateEl.value;
-    if (uppercaseEl.checked === false) {
-      console.log("You must select at least one character type!");
-  };
-});
+
+// console.log(uppercaseEl);
+
+// //                               
+// generateEl.addEventListener('click', function (event) {
+//     event.preventDefault();
+//     generator = generateEl.value;
+//     if (uppercaseEl.checked === false) {
+//       console.log("You must select at least one character type!");
+//   };
+// });
 
 
 
@@ -100,10 +92,10 @@ generateEl.addEventListener('click', function (event) {
 //     console.log(length);
 // })
 
-console.log(randUpper);
-console.log(randLower);
-console.log(randNum);
-console.log(randSpecial);
+// console.log(randUpper);
+// console.log(randLower);
+// console.log(randNum);
+// console.log(randSpecial);
 
 
 // 
@@ -140,15 +132,47 @@ console.log(randSpecial);
 //prompt or checkbox "do you want to use special characters?"
 
 // IF (upper && lower && numbers && special === checkbox.no) {
-//    alert(`You must select at least one type of character!`)
-// } else {
-
-//  generate password here! :D
-//}
-
-//user must specify at least one character 
-
-
+    //    alert(`You must select at least one type of character!`)
+    // } else {
+        
+        //  generate password here! :D
+        //}
+        
+        //user must specify at least one character 
 
 
+        var password = undefined;
+        
+        var resultField = document.getElementById("result");
+        
+        var upperArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+        var lowerArray = "abcdefghijklmnopqrstuvwxyz".split("");
+        var numArray = "0123456789".split("");
+        var specialArray = "~!@#$%^&*()-_+=.,?".split("");
 
+var upperChar = confirm("Would you like to use upper case letters? OK for yes, cancel for no.");
+var lowerChar = confirm("Would you like to use lower case letters? OK for yes, cancel for no.");
+var numericalChar = confirm("Would you like to use numerical characters? OK for yes, cancel for no.");
+var specialChar = confirm("Would you like to use special characters? OK for yes, cancel for no.");
+
+
+if (!upperChar && !lowerChar && !numericalChar && !specialChar) {
+    alert("You must choose at least one character type!");
+} else {    
+    var characterCount = prompt("Please choose how many characters you would like your password to include, between 8 and 128.");
+    
+    if (characterCount < 8 || characterCount > 128) {
+        alert("You must select within a valid range!");
+        
+    }
+}
+
+// create a function to make a new array with the characters chosen
+// generate the password
+// maclunkey
+// 
+//
+//
+//
+//
+//
