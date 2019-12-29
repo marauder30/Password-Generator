@@ -141,7 +141,7 @@
         //user must specify at least one character 
 
 
-        var password = undefined;
+
         var resultField = document.getElementById("result");
         
         // var upperArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
@@ -150,6 +150,7 @@
         // var specialArray = "~!@#$%^&*()-_+=.,?".split("");
         var emptyArray = [];
         var finalArray = [];
+        var passwordArray = [];
         
         var upperChar = confirm("Would you like to use upper case letters? OK for yes, cancel for no.");
         var lowerChar = confirm("Would you like to use lower case letters? OK for yes, cancel for no.");
@@ -189,7 +190,6 @@
 
                 var finalestArray = finalArray[0].split(",");
 
-                console.log(finalestArray);
 
                 // use characterCount var to gather how many times we need to loop
 
@@ -197,11 +197,21 @@
 
 
                  var random = finalestArray[Math.floor(Math.random() * finalestArray.length)];
+                 
+                 passwordArray.push(random);
+
 
                  
                  console.log(random);
 
+
                 }
+
+                console.log(passwordArray);
+
+                var password = passwordArray.join("");
+
+                console.log(password);
 
 
                 // create a for loop with i < characterCount
