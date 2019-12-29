@@ -1,148 +1,9 @@
-// var upperArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-// var lowerArray = "abcdefghijklmnopqrstuvwxyz".split("");
-// var numArray = "0123456789".split("");
-// var specialArray = "~!@#$%^&*()-_+=.,?".split("");
-// var allSelected = 
 
-
-//vvv these currently reside globally. this makes the characters stick to to one
-//     per type. they should exist within functions
-// var randUpper = upperArray[Math.floor(Math.random() * upperArray.length)];
-// var randLower = lowerArray[Math.floor(Math.random() * lowerArray.length)];
-// var randNum = numArray[Math.floor(Math.random() * numArray.length)];
-// var randSpecial = specialArray[Math.floor(Math.random() * specialArray.length)];
-
-// console.log(randUpper);
-
-
-
-
-
-
-// var resultEl = document.getElementById('result');
-// var lengthEl = document.getElementById('length');
-// var uppercaseEl = document.getElementById('uppercase');
-// var lowercaseEl = document.getElementById('lowercase');
-// var numbersEl = document.getElementById('numbers');
-// var symbolsEl = document.getElementById('symbols');
-// var generateEl = document.getElementById('generate');
-// var clipboardEl = document.getElementById('clipboard');
-
-// var totalCharEl = parseInt(lengthEl);
-// var possibleChar = "123";
-// var totalChar = "";
-// var charResult = "";
-
-
-
-//    var value = this.value;
-//    console.log(value);
-//    if (value === true) {
-//        possibleChar = possibleChar.push(randUpper);
-//        console.log(possibleChar);
-//    }
-// ;
-
-// result.textContent
-
-
-// function newPassword() {
-//     if (uppercaseEl === true) {
-//         possibleChar = possibleChar.concat(upperArray);
-//         totalChar.push(randUpper);
-//     }
-//     if (lowercaseEl === true) {
-//         possibleChar = possibleChar.concat(lowerArray);
-//         totalChar.push(randLower);
-//     }
-//     if (numbersEl === true) {
-//         possibleChar = possibleChar.concat(numArray);
-//         totalChar.push(randNum);
-//     }
-//     if (symbolsEl === true) {
-//         possibleChar = possibleChar.concat(specialArray);
-//         totalChar.push(randSpecial);
-//     }
-// }
-
-
-
-
-// console.log(uppercaseEl);
-
-// //                               
-// generateEl.addEventListener('click', function (event) {
-//     event.preventDefault();
-//     generator = generateEl.value;
-//     if (uppercaseEl.checked === false) {
-//       console.log("You must select at least one character type!");
-//   };
-// });
-
-
-
-
-
-
-
-//var length = lengthEl.value
-
-// generateEl.addEventListener("click", function() {
-//     var length = lengthEl.Value;
-//     console.log(length);
-// })
-
-// console.log(randUpper);
-// console.log(randLower);
-// console.log(randNum);
-// console.log(randSpecial);
-
-
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-
-
-
-
-//function randomLower() {
-    //    return String.    
-    
-    
-
-
-//button eventlistener when clicked will generate password 
-
-//prompt or slider "please define a value between 8-128 to determine how long your 
-//  password will be."
-
-//prompt or checkbox "do you want to use upper case letters?"
-
-//prompt  or checkbox "do you want to use lower case letters?"
-
-//prompt  or checkbox "do you want to use numbers?"
-
-//prompt or checkbox "do you want to use special characters?"
-
-// IF (upper && lower && numbers && special === checkbox.no) {
-    //    alert(`You must select at least one type of character!`)
-    // } else {
-        
-        //  generate password here! :D
-        //}
-        
-        //user must specify at least one character 
 
 
 
         var resultField = document.getElementById("result");
+        var clipboard = document.getElementById("clipboard");
         
         // var upperArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
         // var lowerArray = "abcdefghijklmnopqrstuvwxyz".split("");
@@ -193,8 +54,6 @@
                 var finalestArray = finalArray[0].split(",");
 
 
-                // use characterCount var to gather how many times we need to loop
-
                 for (var i = 0; i < characterCount; i++) {
 
 
@@ -202,58 +61,26 @@
                  
                  passwordArray.push(random);
 
+                
                 }
-
+            }
+}                
                 var password = passwordArray.join("");
 
                 console.log(password);
 
                 document.getElementById("result").innerHTML = password;
 
+                clipboard.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    var resultField = document.getElementById("result");
+                    resultField.select();
+                    document.execCommand("copy");
+                    alert("Copied the password: " + resultField.value);
+                })
+
+            
 
 
 
-                // create a for loop with i < characterCount
-
-
-
-                // math.floor/math.random magic to generate 1 character per loop
-
-
-                // make a variable to store the result
-
-
-                // print the result to the resultField var
-
-
-
-                // make sure it ends up on the page!
-
-
-                // add a clipboard click event!
-
-
-
-
-
-                
-                
-                
-                
-            }
-        }
-        //     for (var i = 0; i < characterCount)    
-        // }
-
-
-// math.floor for the object array!
-
-// create a function to make a new array with the characters chosen
-// generate the password
-// maclunkey
-// go buy a notebook
-// 
-// for each loop, characterCount captures how many iterations!
-//
-// remove one button, make the other copy to clipboard
-//
+            
