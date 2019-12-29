@@ -160,6 +160,7 @@
         
         if (!upperChar && !lowerChar && !numericalChar && !specialChar) {
             alert("You must choose at least one character type!");
+            location.reload();
         } else {    
             var characterCount = prompt("Please choose how many characters you would like your password to include, between 8 and 128.");
             var charCount = parseInt(characterCount);
@@ -167,6 +168,7 @@
             
             if (charCount < 8 || charCount > 128) {
                 alert("You must select within a valid range!");
+                location.reload();
             } else {
                 if (upperChar) {
                     emptyArray.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""));
