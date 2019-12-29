@@ -142,7 +142,6 @@
 
 
         var password = undefined;
-        
         var resultField = document.getElementById("result");
         
         // var upperArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
@@ -150,51 +149,60 @@
         // var numArray = "0123456789".split("");
         // var specialArray = "~!@#$%^&*()-_+=.,?".split("");
         var emptyArray = [];
+        var finalArray = [];
+        
+        var upperChar = confirm("Would you like to use upper case letters? OK for yes, cancel for no.");
+        var lowerChar = confirm("Would you like to use lower case letters? OK for yes, cancel for no.");
+        var numericalChar = confirm("Would you like to use numerical characters? OK for yes, cancel for no.");
+        var specialChar = confirm("Would you like to use special characters? OK for yes, cancel for no.");
+        
+        
+        if (!upperChar && !lowerChar && !numericalChar && !specialChar) {
+            alert("You must choose at least one character type!");
+        } else {    
+            var characterCount = prompt("Please choose how many characters you would like your password to include, between 8 and 128.");
+            var charCount = parseInt(characterCount);
+            
+            
+            if (charCount < 8 || charCount > 128) {
+                alert("You must select within a valid range!");
+            } else {
+                if (upperChar) {
+                    emptyArray.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""));
+                }
+                if (lowerChar) {
+                    emptyArray.push("abcdefghijklmnopqrstuvwxyz".split(""));
+                }
+                if (numericalChar) {
+                    emptyArray.push("0123456789".split(""));
+                }
+                if (specialChar) {
+                    emptyArray.push("~!@#$%^&*()-_+=.?".split(""));
+                }
+                
+                function charString() {
+                    var allChar = emptyArray.toString();
+                    finalArray.push(allChar);
+                }
+                
+                charString();
 
-var upperChar = confirm("Would you like to use upper case letters? OK for yes, cancel for no.");
-var lowerChar = confirm("Would you like to use lower case letters? OK for yes, cancel for no.");
-var numericalChar = confirm("Would you like to use numerical characters? OK for yes, cancel for no.");
-var specialChar = confirm("Would you like to use special characters? OK for yes, cancel for no.");
+                var finalestArray = finalArray[0].split(",");
+
+                console.log(finalestArray);
 
 
-if (!upperChar && !lowerChar && !numericalChar && !specialChar) {
-    alert("You must choose at least one character type!");
-} else {    
-    var characterCount = prompt("Please choose how many characters you would like your password to include, between 8 and 128.");
-    var charCount = parseInt(characterCount);
-    
 
-    if (charCount < 8 || charCount > 128) {
-        alert("You must select within a valid range!");
-        } else {
-            if (upperChar) {
-              emptyArray.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""));
+
+
+                
+                
+                
+                
             }
-            if (lowerChar) {
-                emptyArray.push("abcdefghijklmnopqrstuvwxyz".split(""));
-            }
-            if (numericalChar) {
-                emptyArray.push("0123456789".split(""));
-            }
-            if (specialChar) {
-                emptyArray.push("~!@#$%^&*()-_+=.?".split(""));
-            }
-
-            charString();
-
-            function charString() {
-                var allChar = emptyArray.toString();
-                console.log(allChar);
-                var totalChar = allChar.split(",");
-                console.log(totalChar);
-            }
-           
-
-
         }
-    }
-//     for (var i = 0; i < characterCount)    
-// }
+        //     for (var i = 0; i < characterCount)    
+        // }
 
 
 // math.floor for the object array!
