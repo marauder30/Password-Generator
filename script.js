@@ -162,7 +162,7 @@ if (!upperChar && !lowerChar && !numericalChar && !specialChar) {
 } else {    
     var characterCount = prompt("Please choose how many characters you would like your password to include, between 8 and 128.");
     var charCount = parseInt(characterCount);
-    console.log(charCount);
+    
 
     if (charCount < 8 || charCount > 128) {
         alert("You must select within a valid range!");
@@ -179,11 +179,23 @@ if (!upperChar && !lowerChar && !numericalChar && !specialChar) {
             if (specialChar) {
                 emptyArray.push("~!@#$%^&*()-_+=.,?".split(""));
             }
+
+            console.log(emptyArray);
+
+            charString();
+            
+            function charString() {
+                var allChar = emptyArray.toString();
+                console.log(allChar);
+            }
            
         }
     }
 //     for (var i = 0; i < characterCount)    
 // }
+
+
+// math.floor for the object array!
 
 // create a function to make a new array with the characters chosen
 // generate the password
