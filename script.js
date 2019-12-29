@@ -200,18 +200,15 @@
                  
                  passwordArray.push(random);
 
-
-                 
-                 console.log(random);
-
-
                 }
-
-                console.log(passwordArray);
 
                 var password = passwordArray.join("");
 
                 console.log(password);
+
+                document.getElementById("result").innerHTML = password;
+
+
 
 
                 // create a for loop with i < characterCount
