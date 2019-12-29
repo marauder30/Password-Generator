@@ -191,6 +191,38 @@
 
                 console.log(finalestArray);
 
+                // use characterCount var to gather how many times we need to loop
+
+                for (var i = 0; i < characterCount; i++) {
+
+
+                 var random = finalestArray[Math.floor(Math.random() * finalestArray.length)];
+
+                 
+                 console.log(random);
+
+                }
+
+
+                // create a for loop with i < characterCount
+
+
+
+                // math.floor/math.random magic to generate 1 character per loop
+
+
+                // make a variable to store the result
+
+
+                // print the result to the resultField var
+
+
+
+                // make sure it ends up on the page!
+
+
+                // add a clipboard click event!
+
 
 
 
