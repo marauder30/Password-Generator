@@ -177,18 +177,20 @@ if (!upperChar && !lowerChar && !numericalChar && !specialChar) {
                 emptyArray.push("0123456789".split(""));
             }
             if (specialChar) {
-                emptyArray.push("~!@#$%^&*()-_+=.,?".split(""));
+                emptyArray.push("~!@#$%^&*()-_+=.?".split(""));
             }
 
-            console.log(emptyArray);
-
             charString();
-            
+
             function charString() {
                 var allChar = emptyArray.toString();
                 console.log(allChar);
+                var totalChar = allChar.split(",");
+                console.log(totalChar);
             }
            
+
+
         }
     }
 //     for (var i = 0; i < characterCount)    
